@@ -4,7 +4,8 @@ import './news.css';
 
 function News() {
     const [news,setNews] =useState([]);
-    const api = process.env.React_App_News_Api;
+    // const api = process.env.React_App_News_Api;
+    const api = "9ccd4a2ce794449fb7b11796d7ad3583" ;
     const apiUrl ="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey="+api;
      console.log(apiUrl);
     // Note: the empty deps array [] means
@@ -14,7 +15,7 @@ function News() {
         fetch(apiUrl).then((res)=>{
            return res.json();
         }).then((datas)=>{
-               setNews(datas.data);
+               setNews(datas.articles);
                console.log("datas = ",datas);
             })
 
@@ -24,19 +25,19 @@ function News() {
         <div className='news'>
             <div className='news__body'>
                 {news.map((data)=>{
-                    if(data.image != null || undefined){
+                    if(data.urlToImage != null || undefined){
                         return <div className='content'>
                             <div className='news__left__top'>
                                 <div className='news__image'>
-                                    <img src={data.image} alt={data.title} key={data.title}/>
+                                    <img src={data.urlToImage} alt={data.title} key={data.title}/>
                                 </div>
                             </div>
                             <div className='news__right__bottom'>
                                 <div className='news__title'>
-                                    <h3>{data.title}</h3>
+                                    <h3 key={data.title}>{data.title}</h3>
                                 </div>
                                 <div className='news__discription'>
-                                    <p>{data.description}</p>
+                                    <p key={data.title}>{data.description}</p>
                                 </div>
                             </div>
                         </div>;

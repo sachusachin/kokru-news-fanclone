@@ -26,6 +26,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 .news .news__body{
     width: 70%;
