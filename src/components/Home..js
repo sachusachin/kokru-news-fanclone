@@ -8,8 +8,11 @@ function Home({removeAuth,userDetails,token,logout}) {
     return (
         <div className="home">
             <Navbar removeAuth={removeAuth} userDetails={userDetails} token={token} logout={logout}/>
+
         </div>
     );
 }
+
 export default Home;
+
 
