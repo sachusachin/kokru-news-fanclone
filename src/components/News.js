@@ -5,8 +5,8 @@ import './news.css';
 function News() {
     const [news,setNews] =useState([]);
     const api = process.env.React_App_News_Api;
-    const apiUrl = "http://api.mediastack.com/v1/news?access_key=" + api+"&languages=en&limit=100";
-
+    const apiUrl ="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey="+api;
+     console.log(apiUrl);
     // Note: the empty deps array [] means
     // this useEffect will run once
     // similar to componentDidMount()
@@ -15,7 +15,7 @@ function News() {
            return res.json();
         }).then((datas)=>{
                setNews(datas.data);
-               console.log("success");
+               console.log("datas = ",datas);
             })
 
     }, [])
