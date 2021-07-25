@@ -1,6 +1,9 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://us-central1-netlify-intercom.cloudfunctions.net/readHeaders/:splat"
+  to = "http://api.mediastack.com/v1/news
+            ? access_key = 30a581139e439500090cb043f6652950
+            &keywords=tennis
+            &language=en/:splat"
   status = 200
   force = true
   conditions = {Role = ["admin", "cms"]}

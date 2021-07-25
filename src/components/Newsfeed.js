@@ -7,7 +7,7 @@ function Newsfeed({removeAuth,userDetails,token,logout}) {
 
     return (
         <div className="newsfeed">
-            <h1>News feed</h1>
+
         </div>
     );
 }
