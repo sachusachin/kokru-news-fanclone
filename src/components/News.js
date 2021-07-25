@@ -31,13 +31,18 @@ function News() {
                                 <div className='news__image'>
                                     <img src={data.urlToImage} alt={data.title} key={data.title}/>
                                 </div>
+                                <div key={data.title} className='link'><a href={data.url+"&width=500"} target='_blank'>{data.source.name}</a></div>
+                                <div key={data.title} className='bookmark'><button><i className="fal fa-bookmark"> </i></button></div>
                             </div>
-                            <div className='news__right__bottom'>
-                                <div className='news__title'>
+                            <div className='news__right__bottom' key={data.title}>
+                                <div className='news__title' key={data.title}>
                                     <h3 key={data.title}>{data.title}</h3>
                                 </div>
-                                <div className='news__discription'>
-                                    <p key={data.title}>{data.description}</p>
+                                {/*<div className='news__discription' key={data.title}>*/}
+                                {/*    <p key={data.title}>{data.description}</p>*/}
+                                {/*</div>*/}
+                                <div key={data.title} className='news__time'>
+                                    <p>publishedAt : {data.publishedAt}</p>
                                 </div>
                             </div>
                         </div>;
