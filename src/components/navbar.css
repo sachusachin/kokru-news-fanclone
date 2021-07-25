@@ -76,3 +76,19 @@ a {
     font-weight: 600;
     color: #eeeeee;
 }
+.navbar__logout{
+    height: 100%;
+    width: 50px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar__logout button{
+    padding: 5px 10px;
+    background-color: #09EAE1 ;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}

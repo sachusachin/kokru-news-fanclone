@@ -20,7 +20,9 @@ function Navbar({userDetails,token,logout}) {
                     <div className='navbar__head'>
                         <p>{userDetails?.displayName}</p>
                     </div>
-                    <button onClick={logout}>logout</button>
+                    <div className='navbar__logout'>
+                        <button onClick={logout}>logout</button>
+                    </div>
 
                 </div>
             </div>
