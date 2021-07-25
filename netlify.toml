@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api"
-  to = "/* http://api.mediastack.com/v1/news? access_key = 30a581139e439500090cb043f6652950/:splat 200"
+  to = "/* http://api.mediastack.com/v1/news?access_key=30a581139e439500090cb043f6652950/:splat 200"
   status = 200
   force = true
   conditions = {Role = ["admin", "cms"]}
