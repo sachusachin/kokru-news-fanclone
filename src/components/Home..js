@@ -1,5 +1,4 @@
 import React from 'react';
-// import {  useState,useEffect } from "react";
 import './home.css';
 import Navbar from "./Navbar";
 import News from "./News";
