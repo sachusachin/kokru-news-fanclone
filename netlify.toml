@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/api/*"
+  to = "https://us-central1-netlify-intercom.cloudfunctions.net/readHeaders/:splat"
+  status = 200
+  force = true
+  conditions = {Role = ["admin", "cms"]}
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "30a581139e439500090cb043f6652950"

@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
-// import ReactDOM from "react-dom";
-// import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import { Route,Switch } from "react-router";
 import './App.css';
 import Home from "./components/Home.";
 import Login from "./components/Login";
 import {auth, fbProvider, googleProvider} from "./firebase";
 import firebase from "firebase";
+import News from "./components/News";
 
 function App() {
     const [token,setToken] = useState(null);
@@ -85,7 +86,13 @@ function App() {
     if(user === false){
         return <div className="App"> <Login googleLogin={googleLogin} fbLogin={fbLogin}/> </div>
     }else{
-        return <div className="App"> <Home userDetails={user} token={token} logout={logout}/> </div>
+        return (
+           <Router>
+               <div className="App">
+                   <Home userDetails={user} token={token} logout={logout}/>
+               </div>
+           </Router>
+        )
     }
 
 }

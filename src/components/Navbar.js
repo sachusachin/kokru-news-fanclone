@@ -1,25 +1,30 @@
 import React from 'react';
 // import dp from './img/dp1.ico'
 import './navbar.css';
+import {Route} from "react-router";
+import {BrowserRouter as Router} from 'react-router-dom';
+import News from "./News";
 // import Logout from "./Logout";
 
 function Navbar({userDetails,token,logout}) {
     const ltoken = window.localStorage.getItem("token");
     return (
-        <div className="navbar">
-           <div className='navbar__center'>
-               <div className='navbar__logo'>
-                   <img alt='profile'
-                        src={
-                            userDetails?.photoURL+"?fields=height,width&access_token="+(token || ltoken)}/>
-               </div>
-               <div className='navbar__head'>
-                   <p>{userDetails?.displayName}</p>
-               </div>
-               <button onClick={logout}>logout</button>
+        <Router>
+            <div className="navbar">
+                <div className='navbar__center'>
+                    <div className='navbar__logo'>
+                        <img alt='profile'
+                             src={
+                                 userDetails?.photoURL+"?fields=height,width&access_token="+(token || ltoken)}/>
+                    </div>
+                    <div className='navbar__head'>
+                        <p>{userDetails?.displayName}</p>
+                    </div>
+                    <button onClick={logout}>logout</button>
 
-           </div>
-        </div>
+                </div>
+            </div>
+        </Router>
     );
 }
 export default Navbar;
