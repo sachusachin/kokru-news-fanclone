@@ -87,8 +87,10 @@ a {
 .navbar__logout button{
     padding: 5px 10px;
     background-color: #09EAE1 ;
-    color: white;
+    /*color: white;*/
+    font-weight: bold;
     border: none;
+    color: black;
     outline: none;
     border-radius: 3px;
 }
