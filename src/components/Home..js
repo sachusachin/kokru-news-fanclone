@@ -4,7 +4,7 @@ import './home.css';
 import Navbar from "./Navbar";
 import Newsfeed from "./Newsfeed";
 // import Newsfeed from "./Newsfeed";
-// import News from "./News";
+// import Movies from "./Movies";
 
 function Home({removeAuth,userDetails,token,logout}) {
 

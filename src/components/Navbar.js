@@ -4,7 +4,7 @@ import { Offline, Online } from "react-detect-offline";
 import './navbar.css';
 // import {Route} from "react-router";
 import {BrowserRouter as Router} from 'react-router-dom';
-import News from "./News";
+import Movies from "./Movies";
 // import Logout from "./Logout";
 
 function Navbar({userDetails,token,logout}) {

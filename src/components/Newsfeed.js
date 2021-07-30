@@ -1,13 +1,13 @@
 import React from 'react';
 // import {  useState,useEffect } from "react";
 import './newsfeed.css';
-import News from "./News";
+import Movies from "./Movies";
 
 function Newsfeed({removeAuth,userDetails,token,logout}) {
 
     return (
         <div className="newsfeed">
-            <News />
+            <Movies />
         </div>
     );
 }

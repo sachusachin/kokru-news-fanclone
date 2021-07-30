@@ -4,7 +4,7 @@ import './news.css';
 import { Offline, Online } from "react-detect-offline";
 import nonetwork from './img/nonetwork.png';
 
-function News() {
+function Movies() {
     const [news,setNews] =useState([]);
 
     //https://api.themoviedb.org/3/trending/all/day?api_key=9f8c3b07c18967d52d2f686423c4b3b0
@@ -67,4 +67,4 @@ function News() {
     )
 }
 
-export default News;
+export default Movies;

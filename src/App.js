@@ -6,7 +6,7 @@ import Home from "./components/Home.";
 import Login from "./components/Login";
 import {auth, fbProvider, googleProvider} from "./firebase";
 import firebase from "firebase";
-import News from "./components/News";
+import Movies from "./components/Movies";
 
 function App() {
     const [token,setToken] = useState(null);
