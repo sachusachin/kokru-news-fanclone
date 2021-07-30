@@ -116,3 +116,27 @@ body{
     line-height: 24px;
     color: #09EAE1;
 }
+.news__offline{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.news__offline .news__offline__image{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news__offline .news__offline__image img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+.news__offline .news__offline__text{
+    color: gray;
+    padding: 8px;
+}
